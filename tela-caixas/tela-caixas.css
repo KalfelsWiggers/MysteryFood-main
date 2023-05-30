@@ -42,8 +42,7 @@ nav{
     position: relative;
 }
 .cells:hover{
-    width: 220px;
-    height: 220px;
+    height: 240px;
 }
 .cells img{
     width: 130px;
