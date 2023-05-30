@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tela-principal</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/bba71eb6cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="tela-principal.css" />
+  </head>
+  <body>
+    <header class="div-aba_superior">
+      <div class="hollow_space"></div>
+      <div class="name_space">
+        <a href="../tela-principal/tela-principal.html"
+          ><img
+            style="cursor: pointer"
+            onmouseleave="replaceImg('../img/name.png', 'namejs');"
+            onmouseover="replaceImg('../img/name-mouse.png', 'namejs');"
+            src="../img/name.png"
+            id="namejs"
+            width="200px"
+          />
+        </a>
+      </div>
+      <div class="buttons_space">
+        <div class="dropdown">
+          <button>Login</button>
+          <div class="dropdown-content" id="profile_menu">
+            <div class="windownname"><b>LOGIN</b></div>
+            <p style="color: white; font-size: 16px">Insira seus dados</p>
+            <input type="text" placeholder="...Insira seu email" />
+            <br /><br />
+            <input type="password" placeholder="...Insira sua senha" />
+            <br /><br />
+            <button class="button2">ENTRAR</button>
+            <br /><br />
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Criar Conta</button>
+          <div class="dropdown-content" id="profile_menu">
+            <div class="windownname"><b>Criar Conta</b></div>
+            <p style="color: white; font-size: 16px">Insira seus dados</p>
+            <input type="text" placeholder="...Insira um email" />
+            <br /><br />
+            <input type="text" placeholder="...Insira um telefone" />
+            <br /><br />
+            <input type="password" placeholder="...Insira uma senha" />
+            <br /><br />
+            <input type="password" placeholder="...Confirme sua senha" />
+            <br /><br />
+            <button class="button2">ENTRAR</button>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+      <div class="cart-profile_space">
+        <div class="shopping-cart_space">
+          <img
+            style="cursor: pointer"
+            onmouseleave="replaceImg('../img/shoppingcart.png', 'cart');"
+            onmouseover="replaceImg('../img/shoppingcart-mouse.png', 'cart');"
+            src="../img/shoppingcart.png"
+            id="cart"
+            width="60px"
+          />
+          <div id="item-indicator"></div>
+        </div>
+        <div class="dropdown">
+          <span class="profile-space"
+            ><img
+              style="cursor: pointer"
+              onclick="toggleProfileWindow();"
+              onmouseleave="replaceImg('../img/profile.png', 'profile');"
+              onmouseover="replaceImg('../img/profile-mouse.png', 'profile')"
+              ;
+              src="../img/profile.png"
+              id="profile"
+              width="60px"
+          /></span>
+          <div class="dropdown-content" id="profile_menu">
+            <div class="windownname"><b>PERFIL</b></div>
+            <p style="color: white; font-size: 16px">
+              Você ainda não possui uma conta!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="hollow_space"></div>
+    </header>
+    <div class="div-wholebody">
+      <div class="hollow_space2"></div>
+      <div class="center-body">
+        <div class="phrase_space">
+          <div class="txt">A SURPRESA QUE VOCÊ ESPERA!</div>
+          <div class="sub-txt">Peça agora sua caixa de comida</div>
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img src="../img/img1.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="../img/img2.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="../img/img3.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="../img/img4.png" style="width: 100%" />
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <br />
+
+        <div class="button-boxes">
+          <div class="boxes_space">
+            <a href="../tela-caixas/tela-caixas.html" target="_self">
+              <img
+                onmouseleave="replaceImg('../img/boxes.png', 'boxes');"
+                onmouseover="replaceImg('../img/boxes-mouse.png', 'boxes');"
+                src="../img/boxes.png"
+                id="boxes"
+                width="260px"
+              />
+            </a>
+          </div>
+          <div class="affiliate_space">
+            <img
+              onmouseleave="replaceImg('../img/affiliate.png', 'affiliate');"
+              onmouseover="replaceImg('../img/affiliate-mouse.png', 'affiliate');"
+              src="../img/affiliate.png"
+              id="affiliate"
+              width="260px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="hollow_space2"></div>
+    </div>
+    <footer>
+      <div class="contatos">
+        <span>
+          <span style="font-size: 20px">Contatos:</span>
+          <br />
+          <p>(47) XXXXX-XXXX</p>
+          <p>faleconosco@mysteryfood.com.br</p>
+        </span>
+      </div>
+      <div class="redessociais">
+        <a href="*"><img src="../img/twitter.png" /></a>
+        <a href="*"><img src="../img/facebook.png" /></a>
+        <a href="*"><img src="../img/youtube.png" /></a>
+        <a href="*"><img src="../img/instagram.png" /></a>
+      </div>
+      <div class="MQTT_space">
+        <div class="MTQQ" id="MTQQ">
+          <div class="window-name"><b>CHAT</b></div>
+          <div class="mensages_space" id="resposta"></div>
+          <br />
+          <div class="input-mensage-send_space">
+            <input
+              type="text"
+              class="write-mensage"
+              id="mensagem"
+              onkeypress="return searchKeyPress(event)"
+              ;
+              placeholder="Escreva aqui sua dúvida..."
+            />
+            <button id="botao" onclick="Send();">➤</button>
+          </div>
+        </div>
+        <br />
+        <div
+          onclick="toggleScreen();"
+          class="chat-button"
+          style="cursor: pointer"
+        >
+          <img src="../img/chat-button.png" width="30px" />
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="tela-principal.js"></script>
+</html>
